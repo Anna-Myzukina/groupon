@@ -69,7 +69,32 @@ section {
       text-decoration: none;
     }
   }
-  
+  /* forms */
+
+input, 
+textarea, 
+select, 
+.uneditable-input {
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  .btn-styles{
+      text-transform: uppercase;
+      color: white;
+      font-size: 20px;
+      background: rgb(11, 211, 28);
+      border: 2px solid white;
+  }
+  .around_btn{
+      padding: 10px;
+      background: rgb(11, 211, 28);
+  }
+  input {
+    height: auto !important;
+  }
+
   /* footer */
   
   footer {
