@@ -1,13 +1,50 @@
 @import "bootstrap-sprockets"; 
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-/* mixins, variables, etc. */
+@font-face {
+  font-family: "";
+  src: url(/app/assets/fonts/FontsFree-Net-Proxima-Nova-Bold.otf) format("truetype");
+  src: url(/app/assets/fonts/FontsFree-Net-Proxima-Nova-Light.otf) format("truetype");
+}
 
+.proxima_bold{
+  font-family: "Proxima Nova Bold";
+  color: #434b54;
+}
 
-body{
+.proxima_light{
+  font-family: "Proxima Nova Light";
+}
+
+.main_color{
+  background-color: #3778c2 !important;
+  color: white;
+}
+.second_color{
+  background: #5fb523;
+}
+.text_color{
+  color: #434b54;
+}
+.text_upper{
+  text-transform: uppercase;
+}
+.text_capital{
+  text-transform: capitalize;
+}
+.text_lower{
+  text-transform: lowercase;
+}
+.container-fluid{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.container_gradient{
+    width: 100%;
     padding-top: 60px;
     height: 650px;
-    background: linear-gradient(#090979, #0470bd, #00d4ff);
+    background: linear-gradient(#151557, #3778c2);
 }
 
 section {
@@ -24,8 +61,7 @@ section {
       margin-bottom: 10px;
     }
   }
-  
-  /* typography */
+
   
   h1, h2, h3, h4, h5, h6 {
     line-height: 1;
@@ -36,6 +72,7 @@ section {
     letter-spacing: -2px;
     margin-bottom: 30px;
     text-align: center;
+    color: white;
   }
   
   h2 {
@@ -47,30 +84,29 @@ section {
     color: white;
   }
   
+  h3{
+    text-align: center;
+    color: white;
+  }
   p {
     font-size: 1.1em;
     line-height: 1.7em;
   }
-  
-  
-  /* header */
-  
-  #logo {
-    float: left;
-    margin-right: 10px;
-    font-size: 1.7em;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    padding-top: 9px;
-    font-weight: bold;
-    &:hover {
-      color: white;
-      text-decoration: none;
-    }
-  }
-  /* forms */
 
+  .user_avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+  }
+
+  .ul_in_nav{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    cursor: pointer;
+  }
 input, 
 textarea, 
 select, 
@@ -95,29 +131,39 @@ select,
     height: auto !important;
   }
 
-  /* footer */
-  
-  footer {
-      height: 100px;
-    margin-top: 45px;
-    padding-top: 5px;
-    border-top: 1px solid white;
-    color: $gray-light;
-    a {
-      color: rgb(219, 215, 215);
-      &:hover {
-        color: grey;
-      }
-    }
-    small {
-      float: left;
-    }
+  .btn_login,
+  .btn_signup{
+    display: block;
+    margin: auto;
+    padding: 10px 75px;
+    text-transform: uppercase;
+    font-size: large;
+  }
+
+  .btn_login{
+    color: white;
+  }
+
+  .name_of_app{
+    margin-bottom: 5%;
+    font-family: 'Lobster', cursive;
+  }
+  .mt_15{
+    margin-top: 15%;
+  }
+
+
+  #error_explanation {
+    color: red;
     ul {
-      float: right;
-      list-style: none;
-      li {
-        float: left;
-        margin-left: 15px;
-      }
+      color: red;
+      margin: 0 0 30px 0;
+    }
+  }
+  
+  .field_with_errors {
+    @extend .has-error;
+    .form-control {
+      color: $state-danger-text;
     }
   }

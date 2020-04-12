@@ -1,2 +1,10 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, 'Home page') %>
+    <div class="row">
+        <aside class="col-md-6 col-md-offset-3 mt_15">
+            <h1 class="text_color name_of_app">Groupon</h1>
+  
+            <%= link_to "log in", login_path, class: "btn_login btn main_color" %>
+            <%= link_to "sign up", signup_path, class: "btn_signup btn text_color" %>
+        </aside>
+    </div>
+

@@ -1,2 +1,22 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<% provide(:title, "Log in") %>
+<nav class="main_color">
+  <ul class="ul_in_nav">
+    <li><a class="page-link" href="#"><h3><--</h3></a></li>
+    <li><a class="page-link" href="#"><h1>LOG IN</h1></a></li>
+    <li><a class="page-link" href="#"><h3>Log in</h3></a></li>
+  </ul>
+</nav>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:session, url: login_path) do |f| %>
+
+     
+      <%= f.text_field :name, class: 'form-control', placeholder: "Name" %>
+
+
+      <%= f.submit "Log in", class: "btn btn-primary main_color" %>
+    <% end %>
+
+  </div>
+</div>
