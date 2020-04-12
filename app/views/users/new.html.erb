@@ -2,46 +2,21 @@
 <nav class="main_color">
   <ul class="ul_in_nav">
     <li><a class="page-link" href="#"><h3><--</h3></a></li>
-    <li><a class="page-link" href="#"><h1>register</h1></a></li>
-    <li><a class="page-link" href="#"><h3>next</h3></a></li>
+    <li><a class="page-link" href="#"><h1 class="text_upper">register</h1></a></li>
+    <li><a class="page-link" href="#"><h3 class="text_capital">next</h3></a></li>
   </ul>
 </nav>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, url: login_path) do |f| %>
-
-     
-      <%= f.text_field :name, class: 'form-control', placeholder: "Name" %>
-
-
-      <%= f.submit "Log in", class: "btn btn-primary main_color" %>
-    <% end %>
-
-  </div>
-</div>
-
-
-<main class="container_gradient">
-<% provide(:title, 'Sign up') %>
-<h1 class="text-white">GROUPON</h1>
-
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages' %>
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
+      <%= f.text_field :name, class: 'form-control', placeholder: "Name" %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+      <%= f.password_field :password, class: 'form-control', placeholder: "Password" %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Password"  %>
 
-      <div class="around_btn">
-      <%= f.submit "Sign up", class: "btn btn-styles" %>
-      </div>
+      <%= f.submit "Sign up", class: "btn btn-primary main_color" %>
     <% end %>
   </div>
 </div>
