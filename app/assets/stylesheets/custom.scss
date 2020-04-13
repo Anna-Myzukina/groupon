@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets"; 
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import "font-awesome";
 
 @font-face {
   font-family: "";
@@ -8,6 +9,9 @@
   src: url(/app/assets/fonts/FontsFree-Net-Proxima-Nova-Light.otf) format("truetype");
 }
 
+*{
+  border: 1px solid red;
+}
 .proxima_bold{
   font-family: "Proxima Nova Bold";
   color: #434b54;
@@ -140,10 +144,24 @@ select,
     font-size: large;
   }
 
-  .btn_login{
+.arrow{
+    content: "";
     color: white;
-  }
+    font-size: 25px !important;
+    margin-top: 25px;
+}
 
+.icon{
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.underline{
+  width: 175px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(184, 172, 172);
+}
   .name_of_app{
     margin-bottom: 5%;
     font-family: 'Lobster', cursive;
@@ -152,7 +170,13 @@ select,
     margin-top: 15%;
   }
 
+  .mr-3{
+    margin: 5px !important;
+  }
 
+  .bg-gray{
+    background: #cecece;
+  }
   #error_explanation {
     color: red;
     ul {

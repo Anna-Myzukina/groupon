@@ -1,0 +1,13 @@
+<ol class="activities">
+  <%= render @activities %>
+</ol>
+
+ <div class="col-md-8">
+    <% if @user.activities.any? %>
+      <h3>activities (<%= @user.activities.count %>)</h3>
+      <ol class="activities">
+        <%= render @activities %>
+      </ol>
+      <%= will_paginate @activities %>
+    <% end %>
+  </div>
