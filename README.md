@@ -5,7 +5,7 @@
 
 ## Description
 
-This is the Ruby on Rails capstone. It`s based on an app for creating different groups and adding your activities to this groups by goal with your family/friends.
+This is the Ruby on Rails capstone. It`s based on an app for creating different groups and adding your activities to these groups by a goal with your family/friends.
 
 
 ## Skills
@@ -19,8 +19,9 @@ This is the Ruby on Rails capstone. It`s based on an app for creating different 
 - [ ] sqlite3
 
 ## Features
-- [ ] A user can login and logout
-- [ ] A user can ...
+- [ ] A user can signup/login
+- [ ] A user can create, delete, edit groups of avtivities.
+- [ ] A user can create, delete, edit avtivities.
 - [ ] Bootstrap source in vendor/assets
 - [ ] Font awesome CSS source
 
