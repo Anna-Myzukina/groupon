@@ -4,25 +4,13 @@
   <aside class="col-md">
     <section class="user_info">
       <%= image_tag 'user.png', class: 'user_avatar' %>
-      <h3>
-        <%= @user.name %>
-      </h3>
       <div class="centered">
-
-    <% if logged_in? %>
           <ul>
-           <li> <h1>You are Logged In, <%= current_user.name %></h1></li>
-          <li><a href="#"><h3><i class="fa icon group fa-users"></i><span class="underline">All my something</span></h3></a></li>
-          <li><a href="#"><h3><i class="fa icon group fa-users"></i><span class="underline">All my external something</span></h3></a></li>
-          <li><a href="#"><h3><i class="fa icon group fa-users"></i><span class="underline">All groups</span></h3></a></li>
-          <li><h3><i class="fa icon group fa-users"></i><%= link_to 'All groups', groups_path %></h3></li>
-        </ul>
-    
-          
-          <%= link_to "Logout", logout_path %>
-   <% end %>
-
-
+           <li> <h1><%= @user.name %></h1></li>
+          <li><a href="/activities/new/"><h3><i class="fa icon group fa-users"></i><span class="underline">All my activities</span></h3></a></li>
+          <li><a href="/activities/"><h3><i class="fa icon group fa-users"></i><span class="underline">All my external activities</span></h3></a></li>
+          <li><a href="/groups/"><h3><i class="fa icon group fa-users"></i><span class="underline">All groups</span></h3></a></li>    
+        </ul>       
       </div>
     </section>
   </aside>

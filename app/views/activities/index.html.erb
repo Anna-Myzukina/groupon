@@ -19,21 +19,6 @@
                 </div>
             </section>
             <div class="card bg-gray " style="width: 100%">
-                <ul class="list-group list-group-flush">
-                     <li class="list-group-item mr-3">Cras justo odio</li>
-                     <li class="list-group-item mr-3">Dapibus ac facilisis in</li>
-                     <li class="list-group-item mr-3">Vestibulum at eros</li>
-                </ul>
-            </div>
-            <div class="around_btn">
-            <%= button_to 'back', new_activity_path, method: :get, class: 'btn-styles' %>
-            </div> 
-        </div>
-        <div class="col-md-3">
-        </div>
-    </div>
-</div>
-            <div class="card bg-gray " style="width: 100%">
             <% @activities.each do |activity| %>
                 <ul class="list-group list-group-flush">
                      <li class="list-group-item mr-3"><% activity.groups.each do |group_activity| %>
@@ -46,3 +31,12 @@
                 </ul>
             <%end%>
             </div>
+            <div class="around_btn">
+            <%= button_to 'back', new_activity_path, method: :get, class: 'btn-styles' %>
+            </div> 
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+

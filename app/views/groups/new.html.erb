@@ -3,7 +3,7 @@
 <nav class="main_color">
   <ul class="ul_in_nav">
     <li><a class="page-link" href="/"><i class="fa arrow fa-bars"></i></a></li>
-    <li><a class="page-link" href="#"><h1>ADD NEW</h1></a></li>
+    <li><a class="page-link" href="#"><h1>ADD NEW GROUP</h1></a></li>
     <li><a class="page-link" href="#"><i class="fa arrow fa-search"></i></a></li>
   </ul>
 </nav>
@@ -12,15 +12,15 @@
         <div class="col-md-3">
         </div>
         <div class="col-md-6">
-            <section class="activities">
-                <p>Add new group</p>
-            </section>
+
             <div class="card bg-gray " style="width: 100%">
+            <%= form_for @group do |f| %>
                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item mr-3">Cras justo odio</li>
+                     <li class="list-group-item mr-3"><%= f.text_field :name %></li>
                      <li class="list-group-item mr-3">Dapibus ac facilisis in</li>
                      <li class="list-group-item mr-3">Vestibulum at eros</li>
                 </ul>
+                <%end%>
             </div>
             <div class="around_btn">
             <%= button_to 'add new group', new_activity_path, method: :get, class: 'btn-styles' %>
