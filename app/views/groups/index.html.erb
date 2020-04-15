@@ -18,9 +18,10 @@
             <div class="card bg-gray " style="width: 100%">
             <% @groups.each do |group| %>
                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item mr-3"><%= group.icon %> <%= group.name %> <%= link_to 'Show', group %> <%= link_to 'Edit',edit_group_path(group) %> <%= link_to 'delete',group,method: :delete, data: { confirm: 'Are you sure?' } %></li>
-
+                     <li class="list-group-item mr-3"><%= group.icon %> <%= group.name %> <%= link_to 'Show', group %> <%= link_to 'Edit',edit_group_path(group) %> <%= link_to 'delete',group,method: :delete, data: { confirm: 'Are you sure?' } %>
+                     <p>Date: <%= group.created_at.to_formatted_s(:short) %> UTC </p> </li>
                 </ul>
+               
             <%end%>
             </div>
             <div class="around_btn">
