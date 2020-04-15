@@ -38,7 +38,7 @@ This is the Ruby on Rails capstone. It`s based on an app for creating different 
 $ bundle install --without production
 ```
 
-Next, migrate the database:
+- [ ] Next, migrate the database:
 
 $ rails db:create
 
@@ -46,20 +46,19 @@ $ rails db:create
 $ rails db:migrate
 ```
 
-If the test suite passes, you'll be ready to run the app in a local server:
+- [ ] If the test suite passes, you'll be ready to run the app in a local server:
 
 ```
 $ rails server
 ```
-Finally, run the test suite to verify that everything is working correctly:
+- [ ] Finally, run the test suite to verify that everything is working correctly:
 
+```
 $ rails generate rspec:install
 ```
 
 ```
 $ rspec
-```
-
 ```
 
 
