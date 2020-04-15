@@ -1,11 +1,12 @@
 # Project: [Group APP](#)
 
-## Live version of project :  [GroupApp](#)
+## Live version of project :  [groupon](https://radiant-castle-10293.herokuapp.com/)
 ![screen](#)
 
 ## Description
 
-The project you are going to build for the Ruby on Rails capstone is based on an app for grouping payments by goal with your family/friends.
+This is the Ruby on Rails capstone. It`s based on an app for creating different groups and adding your activities to this groups by goal with your family/friends.
+
 
 ## Skills
 - [ ] Ruby 
