@@ -1,7 +1,7 @@
 # Project: [Group APP](#)
 
 ## Live version of project :  [groupon](https://radiant-castle-10293.herokuapp.com/)
-![screen](#)
+![screen](https://github.com/Anna-Myzukina/groupon/blob/development/app/assets/images/screen.png)
 
 ## Description
 
