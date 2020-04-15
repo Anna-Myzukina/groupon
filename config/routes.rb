@@ -4,12 +4,13 @@ Rails.application.routes.draw do
   get 'static_pages/home'
   get 'static_pages/profile'
 
-  get 'signup'  => 'users#new'
-
-  get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
-
+  resources :groups
   resources :activities
   resources :users
+
+  resources :sessions,only: [:destroy]
+  get 'signup', to: 'users#new', as: :signup
+  get 'login', to: 'sessions#new', as: :login
+  get 'logout', to: 'sessions#destroy', as: :logout
+  post 'login', to: 'sessions#create' 
 end

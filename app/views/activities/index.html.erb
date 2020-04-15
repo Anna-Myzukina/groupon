@@ -13,7 +13,10 @@
         </div>
         <div class="col-md-6">
             <section class="activities">
-                <p>Total external ativities: ... hours</p>
+                <div class="total">
+                    <h3 class="proxima_bold">Total hours:</h3>
+                    <h3 class="proxima_bold_dark">12<h3>
+                </div>
             </section>
             <div class="card bg-gray " style="width: 100%">
                 <ul class="list-group list-group-flush">
@@ -30,3 +33,16 @@
         </div>
     </div>
 </div>
+            <div class="card bg-gray " style="width: 100%">
+            <% @activities.each do |activity| %>
+                <ul class="list-group list-group-flush">
+                     <li class="list-group-item mr-3"><% activity.groups.each do |group_activity| %>
+                     <%= group_activity.name %>
+                     <%end%>
+                      <%= activity.name %> 
+                      <%= activity.hours %><%= link_to 'Edit',edit_activity_path(activity) %> 
+                      <%= link_to 'delete',activity,method: :delete, data: { confirm: 'Are you sure?' } %></li>
+
+                </ul>
+            <%end%>
+            </div>

@@ -3,7 +3,7 @@
 <nav class="main_color">
   <ul class="ul_in_nav">
     <li><a class="page-link" href="/"><i class="fa arrow fa-bars"></i></a></li>
-    <li><a class="page-link" href="#"><h1>ACTIVITIES</h1></a></li>
+    <li><a class="page-link" href="#"><h1>Edit group</h1></a></li>
     <li><a class="page-link" href="#"><i class="fa arrow fa-search"></i></a></li>
   </ul>
 </nav>
@@ -13,7 +13,7 @@
         </div>
         <div class="col-md-6">
             <section class="activities">
-                <p>Total ativities: ... hours</p>
+                <p>Edit group</p>
             </section>
             <div class="card bg-gray " style="width: 100%">
                 <ul class="list-group list-group-flush">
@@ -23,32 +23,19 @@
                 </ul>
             </div>
             <div class="around_btn">
-            <%= button_to 'add new activity', new_activity_path, method: :get, class: 'btn-styles' %>
+            <%= button_to 'add new group', new_activity_path, method: :get, class: 'btn-styles' %>
             </div> 
         </div>
         <div class="col-md-3">
         </div>
     </div>
 </div>
-
-<%= form_for @activity do |f| %>
+<%= form_for @group do |f| %>
     
     <%= f.label :name %>
     <%= f.text_field :name %>
+    <%= f.label :icon %>
+    <%= f.text_field :icon %>
 
-    <%= f.label :hours %>
-    <%= f.text_field :hours %>
-
-    <div>
-        <%= f.label 'Group' %>
-        <%= f.collection_check_boxes :group_ids, Group.all,:id, :name do |g| %>
-        <div class="collection-check-box">
-        <%= g.check_box %>
-        <%= g.label %>
-        </div>
-
-<% end %>
-</div> 
-
-<%= f.submit "Add new activity", class: "btn-styles" %>
+<%= f.submit "Add new group", class: "btn-styles" %>
 <%end%>

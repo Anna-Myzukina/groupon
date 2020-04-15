@@ -1,0 +1,6 @@
+<p><%= @group.name %> <%= @group.icon %></p>
+<% @group.activities.each do |group_activity| %>
+    <div>
+    <%= group_activity.name %> 
+    </div>
+<%end%>

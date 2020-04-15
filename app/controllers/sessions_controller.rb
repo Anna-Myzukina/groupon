@@ -3,19 +3,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(name: params[:session][:name])
+    @user = User.find_by(name: params[:name])
     if @user
-      login_url @user
-      flash[:success] = 'Successfully logged in!'
+      session[:user_id] = @user.id
+      flash[:success] = 'Successfully logged in.'
       redirect_to @user
     else
-      flash[:success] = 'user not found!'
-      render 'new'
+      flash[:danger] = 'Error logging in.'
+      redirect_to '/login'
     end
   end
-
   def destroy
-    log_out
-    redirect_to root_url
-  end
+    session[:user_id] = nil
+    redirect_to root_path, notice: "Logged out!"
+  end 
 end

@@ -16,7 +16,9 @@
   font-family: "Proxima Nova Bold";
   color: #434b54;
 }
-
+.proxima_bold_dark{
+  color: rgb(32, 31, 31);
+}
 .proxima_light{
   font-family: "Proxima Nova Light";
 }
@@ -190,4 +192,9 @@ select,
     .form-control {
       color: $state-danger-text;
     }
+  }
+
+  .total{
+    display: flex;
+    justify-content: space-between;
   }

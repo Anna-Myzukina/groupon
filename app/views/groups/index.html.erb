@@ -1,0 +1,33 @@
+<% provide(:title, "All my activities") %>
+<% provide(:navbar_page_title, "all my activities") %>
+<nav class="main_color">
+  <ul class="ul_in_nav">
+    <li><a class="page-link" href="/"><i class="fa arrow fa-bars"></i></a></li>
+    <li><a class="page-link" href="#"><h1>GROUPS ACTIVITIES</h1></a></li>
+    <li><a class="page-link" href="#"><i class="fa arrow fa-search"></i></a></li>
+  </ul>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <section class="activities">
+                <p>Total ativities: ... hours</p>
+            </section>
+            <div class="card bg-gray " style="width: 100%">
+            <% @groups.each do |group| %>
+                <ul class="list-group list-group-flush">
+                     <li class="list-group-item mr-3"><%= group.icon %> <%= group.name %> <%= link_to 'Show', group %> <%= link_to 'Edit',edit_group_path(group) %> <%= link_to 'delete',group,method: :delete, data: { confirm: 'Are you sure?' } %></li>
+
+                </ul>
+            <%end%>
+            </div>
+            <div class="around_btn">
+            <%= button_to 'add new group', new_group_path, method: :get, class: 'btn-styles' %>
+            </div> 
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>

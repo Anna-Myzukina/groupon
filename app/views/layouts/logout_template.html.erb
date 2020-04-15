@@ -1,0 +1,9 @@
+<% if logged_in? %>
+    <%= link_to 'All groups', groups_path %>
+    <h1>You are Logged In, <%= current_user.name %></h1>
+    <%= link_to "Logout", logout_path %>
+  <% else %>
+
+<%= button_to "Login", login_path, method: :get%>
+<%= link_to "Sign Up", signup_path() %>
+<%end%> 

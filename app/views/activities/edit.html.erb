@@ -1,0 +1,21 @@
+<%= form_for @activity do |f| %>
+    
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :hours %>
+    <%= f.text_field :hours %>
+
+    <div>
+        <%= f.label 'Group' %>
+        <%= f.collection_check_boxes :group_ids, Group.all,:id, :name do |g| %>
+        <div class="collection-check-box">
+        <%= g.check_box %>
+        <%= g.label %>
+        </div>
+
+<% end %>
+</div> 
+
+<%= f.submit "Edit activity", class: "btn-styles" %>
+<%end%>
