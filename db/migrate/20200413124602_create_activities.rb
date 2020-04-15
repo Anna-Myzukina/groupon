@@ -8,6 +8,6 @@ class CreateActivities < ActiveRecord::Migration[5.1]
       t.timestamps
     end
     add_foreign_key :activities, :users, column: :author_id
-    add_index :microposts, [:user_id, :created_at]
+    add_index :activities, [:user_id, :created_at]
   end
 end
