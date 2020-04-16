@@ -50,6 +50,6 @@ class ActivitiesController < ApplicationController
   end
 
   def activity_params
-    params.require(:activity).permit(:name, :hours, group_ids:[])
+    params.require(:activity).permit(:name, :hours, group_ids: [])
   end
 end
