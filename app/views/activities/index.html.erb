@@ -12,36 +12,36 @@
         <div class="col-md-3">
         </div>
         <div class="col-md-6">
-        <% @activities.each do |activ| %>
+       <% @activities.each do |activity| %> 
             <section class="activities">
                 <div class="total">
                     <h3 class="proxima_bold">Total hours:</h3>
                     <h3 class="proxima_bold_dark">
-                        <%= activ.hours %> 
+                    
+                        <%= activity.hours %> 
+                   
                     <h3>
                 </div>
-        </section>
-        
+        </section>    
             <div class="card bg-gray " style="width: 100%">
-            <% @activities.each do |activity| %>
                 <ul class="list-group list-group-flush">
                      <li class="list-group-item mr-3">
                      <% activity.groups.each do |group_activity| %>
                      <span class="proxima_bold"><%= group_activity.name %> : </span>
                      <%end%>
                       <span class="proxima_bold_dark"><%= activity.name %> </span>
-                    
-                      <%= link_to 'Edit',edit_activity_path(activity) %> 
-                      <%= link_to 'delete',activity,method: :delete, data: { confirm: 'Are you sure?' } %></li>
-
+                      </li>
                 </ul>
-            <%end%>
-            <% end %>
+                    <div class="btn_group">
+                      <%= link_to 'Edit',edit_activity_path(activity) %> 
+                      <%= link_to 'delete',activity,method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </div>
             </div>
-            
+            <% end %>
             <div class="around_btn">
             <%= button_to 'back', new_activity_path, method: :get, class: 'btn-styles' %>
             </div> 
+            
         </div>
         <div class="col-md-3">
         </div>

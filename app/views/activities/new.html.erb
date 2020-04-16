@@ -12,16 +12,6 @@
         <div class="col-md-3">
         </div>
         <div class="col-md-6">
-        <% @activities.each do |activ| %>
-            <section class="activities">
-                <div class="total">
-                    <h3 class="proxima_bold">Total hours:</h3>
-                    <h3 class="proxima_bold_dark">
-                        <%= activ.hours %> 
-                    <h3>
-                </div>
-            </section>
-            <% end %>
                 <div class="card bg-gray " style="width: 100%">
                 <%= form_for @activity do |f| %>
                     <ul class="list-group list-group-flush">
