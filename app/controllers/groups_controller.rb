@@ -3,6 +3,7 @@ class GroupsController < ApplicationController
     before_action :set_group, only: [:show, :edit, :update, :destroy]
     def index 
         @groups = Group.all
+        @group = Group.new
     end
 
     def show 
@@ -48,7 +49,7 @@ class GroupsController < ApplicationController
     end
 
     def group_params
-        params.require(:group).permit(:name, :icon)
+        params.require(:group).permit(:name, :icon,:icon_cache)
     end
     
 end

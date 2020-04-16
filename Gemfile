@@ -18,6 +18,7 @@ source 'https://rubygems.org'
      gem 'jbuilder',     '2.7.0'
      gem 'rubocop'
      gem 'pg'
+     gem 'carrierwave', '~> 2.0'
 
      group :development, :test do
      gem "rspec-rails"

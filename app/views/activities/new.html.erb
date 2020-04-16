@@ -2,7 +2,7 @@
 <% provide(:navbar_page_title, "all my activities") %>
 <nav class="main_color">
   <ul class="ul_in_nav">
-    <li><a class="page-link" href="/"><i class="fa arrow fa-bars"></i></a></li>
+    <li><a class="page-link" href="/groups"><i class="fa arrow fa-bars"></i></a></li>
     <li><a class="page-link" href="#"><h1>ACTIVITIES</h1></a></li>
     <li><a class="page-link" href="#"><i class="fa arrow fa-search"></i></a></li>
   </ul>
@@ -12,43 +12,45 @@
         <div class="col-md-3">
         </div>
         <div class="col-md-6">
+        <% @activities.each do |activ| %>
             <section class="activities">
-                <p>Total ativities: ... hours</p>
+                <div class="total">
+                    <h3 class="proxima_bold">Total hours:</h3>
+                    <h3 class="proxima_bold_dark">
+                        <%= activ.hours %> 
+                    <h3>
+                </div>
             </section>
-            <div class="card bg-gray " style="width: 100%">
-                <ul class="list-group list-group-flush">
-                     <li class="list-group-item mr-3">Cras justo odio</li>
-                     <li class="list-group-item mr-3">Dapibus ac facilisis in</li>
-                     <li class="list-group-item mr-3">Vestibulum at eros</li>
-                </ul>
-            </div>
-            <div class="around_btn">
-            <%= button_to 'add new activity', new_activity_path, method: :get, class: 'btn-styles' %>
-            </div> 
+            <% end %>
+                <div class="card bg-gray " style="width: 100%">
+                <%= form_for @activity do |f| %>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item mr-3">
+                        <%= f.text_field :name, placeholder: "Name of activity" %>
+                        </li>
+                        <li class="list-group-item mr-3">
+                        <%= f.text_field :hours, placeholder: "Hours of activity" %>
+                        </li>
+                        <li class="list-group-item mr-3">
+                        <p>Choose group:</p>
+                        <%= f.collection_check_boxes :group_ids, Group.all,:id, :name do |check| %>
+                        <div class="collection-check-box">
+                            <%= check.check_box %>
+                            <%= check.label %>
+                        </div>
+                        <% end %>
+                        </li>
+                    </ul>
+                </div>
+                  
+                <div class="around_btn">
+                <%= f.submit "Add new activity", class: "btn-styles" %>
+                <% end %>
+                </div> 
+          
         </div>
         <div class="col-md-3">
         </div>
     </div>
 </div>
 
-<%= form_for @activity do |f| %>
-    
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-
-    <%= f.label :hours %>
-    <%= f.text_field :hours %>
-
-    <div>
-        <%= f.label 'Group' %>
-        <%= f.collection_check_boxes :group_ids, Group.all,:id, :name do |g| %>
-        <div class="collection-check-box">
-        <%= g.check_box %>
-        <%= g.label %>
-        </div>
-
-<% end %>
-</div> 
-
-<%= f.submit "Add new activity", class: "btn-styles" %>
-<%end%>

@@ -12,6 +12,7 @@
 .proxima_bold{
   font-family: "Proxima Nova Bold";
   color: #434b54;
+  font-size: 22px;
 }
 .proxima_bold_dark{
   font-family: "Proxima Nova Bold";
@@ -174,17 +175,20 @@ select,
   .mr-3{
     margin: 5px !important;
   }
-
+  .ml-3{
+    margin-left: 15px;
+  }
   .bg-gray{
     background: #cecece;
   }
 
   .icon_group{
     display: inline-block;
-    padding: 5%;
     width: 70px;
     height: 70px;
-
+  }
+  span .proxima_bold{
+    font-size: 23px;
   }
   #error_explanation {
     color: red;

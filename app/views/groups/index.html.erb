@@ -2,7 +2,7 @@
 <% provide(:navbar_page_title, "all my activities") %>
 <nav class="main_color">
   <ul class="ul_in_nav">
-    <li><a class="page-link" href="/"><i class="fa arrow fa-bars"></i></a></li>
+    <li><a class="page-link" href="/activities"><i class="fa arrow fa-bars"></i></a></li>
     <li><a class="page-link" href="#"><h1>GROUPS ACTIVITIES</h1></a></li>
     <li><a class="page-link" href="#"><i class="fa arrow fa-search"></i></a></li>
   </ul>
@@ -12,27 +12,26 @@
         <div class="col-md-3">
         </div>
         <div class="col-md-6">
-            <section class="activities">
-                <p>Total ativities: ... hours</p>
-            </section>
             <div class="card bg-gray " style="width: 100%">
             <% @groups.each do |group| %>
                 <ul class="list-group list-group-flush">
                      <li class="list-group-item mr-3">
-                     <span class="icon_group bg-gray">
-                        <%= group.icon %>
-                    </span>
+                    <% if group.icon? %>
+                    <%= image_tag group.icon.url, class: 'icon_group' %>
+                    <% end %>
                     <span class="proxima_bold"> 
                     <%= group.name %> 
                     </span>
-                    <div class="btn_group">
+                    <p class="ml-3">Date: <%= group.created_at.to_formatted_s(:short) %>
+                     UTC 
+                     </p> 
+                    </li>
+                </ul>
+                <div class="btn_group">
                     <%= link_to 'Show', group %> 
                     <%= link_to 'Edit',edit_group_path(group) %> 
                     <%= link_to 'delete',group,method: :delete, data: { confirm: 'Are you sure?' } %>
-                    </div>
-                    <p>Date: <%= group.created_at.to_formatted_s(:short) %> UTC </p> </li>
-                </ul>
-               
+                </div>
             <%end%>
             </div>
             <div class="around_btn">
@@ -43,3 +42,4 @@
         </div>
     </div>
 </div>
+

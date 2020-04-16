@@ -3,12 +3,14 @@ class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
   def index 
       @activities = Activity.all
+      @activity = Activity.new
   end
 
   def show 
   end
 
   def new 
+      @activities = Activity.all
       @activity = Activity.new
   end
 
