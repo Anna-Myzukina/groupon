@@ -16,7 +16,7 @@ This is the Ruby on Rails capstone. It`s based on an app for creating different 
 - [ ] bcrypt
 - [ ] will_paginate
 - [ ] rubocop
-- [ ] sqlite3
+- [ ] postgreSQL
 
 ## Features
 - [ ] A user can signup/login
