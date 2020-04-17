@@ -1,7 +1,7 @@
 # Project: [Group APP](#)
 
 ## Live version of project :  [groupon](https://radiant-castle-10293.herokuapp.com/)
-![screen](https://github.com/Anna-Myzukina/groupon/blob/deploy/app/assets/images/3wycoj.gif)
+![screen](https://github.com/Anna-Myzukina/groupon/blob/deploy/app/assets/images/screen.png)
 
 ## Description
 
@@ -25,6 +25,8 @@ This is the Ruby on Rails capstone. It`s based on an app for creating different 
 - [ ] Bootstrap source in vendor/assets
 - [ ] Font awesome CSS source
 
+![screen](https://github.com/Anna-Myzukina/groupon/blob/deploy/app/assets/images/3wycoj.gif)
+
 ## Environment
 - [ ] Ruby on Rails version 5.1.7
 - [ ] bcrypt version 3.1.12 ([bcrypt()](https://github.com/codahale/bcrypt-ruby) allows you to easily harden your application against these kinds of attacks.)
@@ -40,7 +42,9 @@ $ bundle install --without production
 
 - [ ] Next, migrate the database:
 
+```
 $ rails db:create
+```
 
 ```
 $ rails db:migrate
