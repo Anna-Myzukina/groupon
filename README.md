@@ -22,8 +22,13 @@ This is the Ruby on Rails capstone. It`s based on an app for creating different 
 - [ ] A user can signup/login
 - [ ] A user can create, delete, edit groups of avtivities.
 - [ ] A user can create, delete, edit avtivities.
+- [ ] Users can add icons to groups.
 - [ ] Bootstrap source in vendor/assets
 - [ ] Font awesome CSS source
+
+## Future features
+- [ ] Users can upload profile photos.
+
 
 ![screen](https://github.com/Anna-Myzukina/groupon/blob/deploy/app/assets/images/3wycoj.gif)
 
@@ -49,6 +54,8 @@ $ rails db:create
 ```
 $ rails db:migrate
 ```
+
+## Run tests
 
 - [ ] If the test suite passes, you'll be ready to run the app in a local server:
 
