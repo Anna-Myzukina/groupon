@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Activity, type: :model do
   before do
-    @activity = Activity.create(name: 'running')
+    @author = User.create(name: 'anna', password: '123456')
+    @activity = @author.activities.create(name: 'running', hours: '8')
   end
 
   it 'is valid with name of activity and hours of activity' do

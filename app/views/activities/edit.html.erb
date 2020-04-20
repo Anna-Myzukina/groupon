@@ -1,4 +1,20 @@
-<%= form_for @activity do |f| %>
+<% provide(:title, "All my activities") %>
+<% provide(:navbar_page_title, "all my activities") %>
+<nav class="main_color">
+  <ul class="ul_in_nav">
+    <li><a class="page-link" href="/groups"><i class="fa arrow fa-bars"></i></a></li>
+    <li><a class="page-link" href="#"><h1>EDIT ACTIVITY</h1></a></li>
+    <li><a class="page-link" href="#"><i class="fa arrow fa-search"></i></a></li>
+  </ul>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+
+            <div class="card bg-gray " style="width: 100%">
+            <%= form_for @activity do |f| %>
     
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -16,6 +32,11 @@
 
 <% end %>
 </div> 
-
-<%= f.submit "Edit activity", class: "btn-styles" %>
-<%end%>
+            <div class="around_btn">
+            <%= f.submit "Edit activity", class: "btn-styles" %>
+            <%end%>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>

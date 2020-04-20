@@ -12,7 +12,7 @@
         <div class="col-md-3">
         </div>
         <div class="col-md-6">
-                <div class="card bg-gray " style="width: 100%">
+            <div class="card bg-gray " style="width: 100%">
                 <%= form_for @activity do |f| %>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item mr-3">
@@ -28,17 +28,14 @@
                             <%= check.check_box %>
                             <%= check.label %>
                         </div>
-                        
                         </li>
                     </ul>
-
+                    <% end %>
                 </div>
-                  
                 <div class="around_btn">
                 <%= f.submit "Add new activity", class: "btn-styles" %>
-                <% end %>
                 </div> 
-          
+              <%end%>
         </div>
         <div class="col-md-3">
         </div>
