@@ -1,7 +1,8 @@
 # Project: [Group APP](#)
 
 ## Live version of project :  [groupon](https://radiant-castle-10293.herokuapp.com/)
-![screen](https://github.com/Anna-Myzukina/groupon/blob/deploy/app/assets/images/screen.png)
+![screen](https://github.com/Anna-Myzukina/groupon/blob/deploy/app/assets/images/3wycoj.gif)
+
 
 ## Description
 
@@ -29,8 +30,8 @@ This is the Ruby on Rails capstone. It`s based on an app for creating different 
 ## Future features
 - [ ] Users can upload profile photos.
 
+![screen](https://github.com/Anna-Myzukina/groupon/blob/deploy/app/assets/images/screen.png)
 
-![screen](https://github.com/Anna-Myzukina/groupon/blob/deploy/app/assets/images/3wycoj.gif)
 
 ## Environment
 - [ ] Ruby on Rails version 5.1.7
