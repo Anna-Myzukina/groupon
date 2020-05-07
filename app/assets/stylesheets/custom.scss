@@ -12,8 +12,10 @@
 .proxima_bold{
   font-family: "Proxima Nova Bold";
   color: #434b54;
+  font-size: 22px;
 }
 .proxima_bold_dark{
+  font-family: "Proxima Nova Bold";
   color: rgb(32, 31, 31);
 }
 .proxima_light{
@@ -164,6 +166,7 @@ select,
   .name_of_app{
     margin-bottom: 15%;
     font-family: 'Lobster', cursive;
+    
   }
   .mt_15{
     margin-top: 15%;
@@ -172,9 +175,20 @@ select,
   .mr-3{
     margin: 5px !important;
   }
-
+  .ml-3{
+    margin-left: 15px;
+  }
   .bg-gray{
     background: #cecece;
+  }
+
+  .icon_group{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+  }
+  span .proxima_bold{
+    font-size: 23px;
   }
   #error_explanation {
     color: red;

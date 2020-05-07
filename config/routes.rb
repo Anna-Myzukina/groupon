@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'static_pages/home'
   get 'static_pages/profile'
+  get 'sessions/new'
 
   resources :groups
   resources :activities

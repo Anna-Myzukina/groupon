@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def show
     @user = User.find(params[:id])
     @activities = @user.activities.paginate(page: params[:page])
@@ -10,9 +9,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)   
+    @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Welcome! Start control your activity"
+      flash[:success] = 'Welcome! Start control your activity'
       redirect_to @user
     else
       render 'new'

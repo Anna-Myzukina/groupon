@@ -1,11 +1,11 @@
 # Project: [Group APP](#)
 
 ## Live version of project :  [groupon](https://radiant-castle-10293.herokuapp.com/)
-![screen](#)
+![screen](https://github.com/Anna-Myzukina/groupon/blob/deploy/app/assets/images/screen.png)
 
 ## Description
 
-This is the Ruby on Rails capstone. It`s based on an app for creating different groups and adding your activities to this groups by goal with your family/friends.
+This is the Ruby on Rails capstone. It`s based on an app for creating different groups and adding your activities to these groups by a goal with your family/friends.
 
 
 ## Skills
@@ -16,13 +16,21 @@ This is the Ruby on Rails capstone. It`s based on an app for creating different 
 - [ ] bcrypt
 - [ ] will_paginate
 - [ ] rubocop
-- [ ] sqlite3
+- [ ] postgreSQL
 
 ## Features
-- [ ] A user can login and logout
-- [ ] A user can ...
+- [ ] A user can signup/login
+- [ ] A user can create, delete, edit groups of avtivities.
+- [ ] A user can create, delete, edit avtivities.
+- [ ] Users can add icons to groups.
 - [ ] Bootstrap source in vendor/assets
 - [ ] Font awesome CSS source
+
+## Future features
+- [ ] Users can upload profile photos.
+
+
+![screen](https://github.com/Anna-Myzukina/groupon/blob/deploy/app/assets/images/3wycoj.gif)
 
 ## Environment
 - [ ] Ruby on Rails version 5.1.7
@@ -37,10 +45,10 @@ This is the Ruby on Rails capstone. It`s based on an app for creating different 
 $ bundle install --without production
 ```
 
-Next, migrate the database:
+- [ ] Next, migrate the database:
 
 ```
-$ rails db:migrate
+$ rails db:create
 ```
 
 ### Run tests
@@ -48,22 +56,24 @@ $ rails db:migrate
 Finally, run the test suite to verify that everything is working correctly:
 
 ```
-$ rails test
+$ rails db:migrate
 ```
 
-If the test suite passes, you'll be ready to run the app in a local server:
+## Run tests
+
+- [ ] If the test suite passes, you'll be ready to run the app in a local server:
 
 ```
 $ rails server
 ```
+- [ ] Finally, run the test suite to verify that everything is working correctly:
+
+```
+$ rails generate rspec:install
+```
 
 ```
 $ rspec
-```
-
-```
-
-$ rails generate rspec:install
 ```
 
 ## Show your support
