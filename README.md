@@ -21,8 +21,8 @@ This is the Ruby on Rails capstone. It`s based on an app for creating different 
 
 ## Features
 - [ ] A user can signup/login
-- [ ] A user can create, delete, edit groups of avtivities.
-- [ ] A user can create, delete, edit avtivities.
+- [ ] A user can create, delete, edit groups of activities.
+- [ ] A user can create, delete, edit activities.
 - [ ] Users can add icons to groups.
 - [ ] Bootstrap source in vendor/assets
 - [ ] Font awesome CSS source
