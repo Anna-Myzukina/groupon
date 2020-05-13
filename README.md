@@ -29,6 +29,7 @@ This is the Ruby on Rails capstone. It`s based on an app for creating different 
 
 ## Future features
 - [ ] Users can upload profile photos.
+- [ ] Users can comment activities.
 
 ![screen](https://github.com/Anna-Myzukina/groupon/blob/deploy/app/assets/images/screen.png)
 
