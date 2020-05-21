@@ -1,12 +1,14 @@
 # Project: [Group APP](#)
 
-## Live version of project :  [groupon](https://radiant-castle-10293.herokuapp.com/)
+## Description
+
+This is the Ruby on Rails capstone. It is based on an app for creating different groups and adding your activities to these groups by a goal with your family/friends.
+
+
 ![screen](https://github.com/Anna-Myzukina/groupon/blob/deploy/app/assets/images/3wycoj.gif)
 
 
-## Description
-
-This is the Ruby on Rails capstone. It`s based on an app for creating different groups and adding your activities to these groups by a goal with your family/friends.
+## Live version of project :  [groupon](https://radiant-castle-10293.herokuapp.com/)
 
 
 ## Skills
